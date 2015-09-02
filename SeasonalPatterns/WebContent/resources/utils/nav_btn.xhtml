@@ -7,11 +7,12 @@
 	xmlns:cc="http://java.sun.com/jsf/composite">
 
 <cc:interface>
-	<cc:attribute name="" />
+	<cc:attribute name="value"></cc:attribute>
 </cc:interface>
 
 <cc:implementation>
-	
-
+	<span id="#{cc.id}" class="nav_btn" >
+		<h:outputText id="btnLabel" value="#{cc.attrs.value}"></h:outputText>
+	</span>
 </cc:implementation>
 </html>

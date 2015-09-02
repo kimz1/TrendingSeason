@@ -4,13 +4,19 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:cc="http://java.sun.com/jsf/composite">
+	xmlns:cc="http://java.sun.com/jsf/composite"
+	xmlns:utils="http://java.sun.com/jsf/composite/utils">
 
 <cc:interface>
-	<cc:attribute name="" />
+
 </cc:interface>
 
 <cc:implementation>
-	<div id="nav_bar" class="nav_bar_class"></div>
+	<div id="#{cc.id}" class="nav_bar_class">
+		<utils:nav_btn id="spread" value="SPREAD"></utils:nav_btn>
+		<utils:nav_btn id="outright" value="OUTRIGHT"></utils:nav_btn>
+		<utils:nav_btn id="backtest" value="BACKTEST"></utils:nav_btn>
+		<utils:nav_btn id="portfolio" value="PORTFOLIO"></utils:nav_btn>
+	</div>
 </cc:implementation>
 </html>
