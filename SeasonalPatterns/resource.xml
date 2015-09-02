@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<sp:seasonal xmlns:sp="http://www.seasonalpatterns.com/resourceSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seasonalpatterns.com/resourceSchema resourceSchema.xsd">
+  <sp:commodity>
+    <sp:type>Corn</sp:type>
+    <sp:month>Z</sp:month>
+    <sp:year>2015</sp:year>
+    <sp:exchange>CBOT</sp:exchange>
+  </sp:commodity>
+  <!-- <sp:commodity>
+    <sp:type>Wheat</sp:type>
+    <sp:month>H</sp:month>
+    <sp:year>2015</sp:year>
+    <sp:exchange>CBOT</sp:exchange>
+  </sp:commodity>
+  <sp:commodity>
+    <sp:type>Oats</sp:type>
+    <sp:month>H</sp:month>
+    <sp:year>2015</sp:year>
+    <sp:exchange>CBOT</sp:exchange>
+  </sp:commodity>
+  <sp:commodity>
+    <sp:type>Oats</sp:type>
+    <sp:month>K</sp:month>
+    <sp:year>2015</sp:year>
+    <sp:exchange>CBOT</sp:exchange>
+  </sp:commodity> -->
+</sp:seasonal>

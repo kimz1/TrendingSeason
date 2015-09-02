@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.seasonalpatterns.com/resourceSchema" xmlns:sp="http://www.seasonalpatterns.com/resourceSchema" elementFormDefault="qualified">
+
+    <element name="seasonal" type="sp:seasonal"></element>
+    
+    <complexType name="seasonal">
+    	<sequence>
+    		<element name="commodity" type="sp:comodity" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="comodity">
+    	<sequence>
+    		<element name="type" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="month" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="year" type="int" maxOccurs="1" 
+    			minOccurs="1">
+    			</element>
+    		<element name="exchange" type="string" maxOccurs="1" 
+    			minOccurs="1">
+    			</element>
+    	</sequence>
+    </complexType>
+</schema>
