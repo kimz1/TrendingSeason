@@ -8,15 +8,15 @@
 	xmlns:utils="http://java.sun.com/jsf/composite/utils">
 
 <cc:interface>
-
+	<cc:attribute name="focus"></cc:attribute>
 </cc:interface>
 
 <cc:implementation>
 	<div id="#{cc.id}" class="nav_bar_class">
-		<utils:nav_btn id="spread" value="SPREAD"></utils:nav_btn>
-		<utils:nav_btn id="outright" value="OUTRIGHT"></utils:nav_btn>
-		<utils:nav_btn id="backtest" value="BACKTEST"></utils:nav_btn>
-		<utils:nav_btn id="portfolio" value="PORTFOLIO"></utils:nav_btn>
+		<utils:nav_btn id="spread" value="SPREAD" styleClass="#{cc.attrs.focus == 'spread' ? 'nav_btn_focused' : 'nav_btn'}"></utils:nav_btn>
+		<utils:nav_btn id="outright" value="OUTRIGHT" styleClass="#{cc.attrs.focus == 'outright' ? 'nav_btn_focused' : 'nav_btn'}"></utils:nav_btn>
+		<utils:nav_btn id="backtest" value="BACKTEST" styleClass="#{cc.attrs.focus == 'backtest' ? 'nav_btn_focused' : 'nav_btn'}"></utils:nav_btn>
+		<utils:nav_btn id="portfolio" value="PORTFOLIO" styleClass="#{cc.attrs.focus == 'portfolio' ? 'nav_btn_focused' : 'nav_btn'}"></utils:nav_btn>
 	</div>
 </cc:implementation>
 </html>

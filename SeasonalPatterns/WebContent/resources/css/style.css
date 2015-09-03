@@ -27,3 +27,16 @@ body {
 	background-color: #4A4A4A;
 }
 
+.nav_btn_focused {
+	font: 14px helvetica, calibri, arial, sans-serif;
+	color: #ECECEC;
+	background-color: #6D6D6D;
+	padding: 13px 10px 13px 10px;
+	line-height: 48px;
+	cursor: default;
+}
+
+.nav_btn_focused:HOVER {
+	background-color: #4A4A4A;
+}
+

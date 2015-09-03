@@ -7,12 +7,13 @@
 	xmlns:cc="http://java.sun.com/jsf/composite">
 
 <cc:interface>
-	<cc:attribute name="value"></cc:attribute>
+	<cc:attribute name="value" required="true"></cc:attribute>
+	<cc:attribute name="styleClass" default="nav_btn"></cc:attribute>
 </cc:interface>
 
 <cc:implementation>
-	<span id="#{cc.id}" class="nav_btn" >
-		<h:outputText id="btnLabel" value="#{cc.attrs.value}"></h:outputText>
+	<span id="#{cc.id}" class="#{cc.attrs.styleClass}" onclick="window.location.href='#{cc.id}.jsf';">
+		<h:outputText id="btnLabel"  value="#{cc.attrs.value}"></h:outputText>
 	</span>
 </cc:implementation>
 </html>
