@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="SeasonalPatterns">
+    <wb-module deploy-name="TrendingSeason">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="SeasonalPatterns"/>
-        <property name="java-output-path" value="/SeasonalPatterns/build/classes"/>
+        <property name="java-output-path" value="/TrendingSeason/build/classes"/>
+        <property name="context-root" value="TrendingSeason"/>
     </wb-module>
 </project-modules>

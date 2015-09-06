@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.seasonalpatterns.helper.CommTracker;
+import com.helper.CommTracker;
 
 @WebServlet("/tester")
 public class Tester extends HttpServlet{

@@ -2,10 +2,10 @@ package com.seasonalpatterns;
 
 import java.util.Date;
 
-import com.seasonalpatterns.comm.Commodity;
-import com.seasonalpatterns.downloader.QuandlAPI;
-import com.seasonalpatterns.helper.CommFactory;
-import com.seasonalpatterns.helper.CommMonth;
+import com.comm.Commodity;
+import com.downloader.QuandlAPI;
+import com.helper.CommFactory;
+import com.helper.CommMonth;
 
 public class MainTester {
 
