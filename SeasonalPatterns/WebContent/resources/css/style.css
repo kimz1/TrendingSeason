@@ -7,20 +7,19 @@ body {
 #nav_bar {
 	background-color: #5D5D5D;
 	padding-left: 2px;
-	height: 48px;
-	top: 0px;
-	left: 0px;
+	height: 46px;
 	width: 100%;
 	position: fixed;
 }
 
 .nav_btn {
 	font: 14px helvetica, calibri, arial, sans-serif;
-	color: #ECECEC;
+	color: #DCDCDC;
 	background-color: inherit;
 	padding: 13px 10px 13px 10px;
-	line-height: 48px;
+	line-height: 46px;
 	cursor: default;
+	margin: 0px;
 }
 
 .nav_btn:HOVER {
@@ -29,14 +28,39 @@ body {
 
 .nav_btn_focused {
 	font: 14px helvetica, calibri, arial, sans-serif;
-	color: #ECECEC;
+	color: #DCDCDC;
 	background-color: #6D6D6D;
 	padding: 13px 10px 13px 10px;
-	line-height: 48px;
+	line-height: 46px;
 	cursor: default;
+	margin: 0px;
 }
 
 .nav_btn_focused:HOVER {
+	background-color: #4A4A4A;
+}
+
+#login {
+	font: 14px helvetica, calibri, arial, sans-serif;
+	color: #DCDCDC;
+	background-color: inherit;
+	line-height: 42px;
+	cursor: default;
+	float: right;
+	margin: 2px 4px 0px 0px;
+}
+
+#login img {
+	float: left;
+	padding: 5px 8px 0px 10px;
+}
+
+#login .login_lbl {
+	float: right; 
+	padding-right: 10px;
+}
+
+#login:HOVER {
 	background-color: #4A4A4A;
 }
 
