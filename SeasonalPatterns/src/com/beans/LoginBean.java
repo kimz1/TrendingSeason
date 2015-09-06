@@ -59,18 +59,6 @@ public class LoginBean implements Serializable{
 		FacesContext ctx = FacesContext.getCurrentInstance();
 		HttpSession session = (HttpSession) ctx.getExternalContext().getSession(false);
 		if(session != null) session.invalidate();
-		return "failure";
-	}
-	
-	public String getRequestURI() {
-		FacesContext ctx = FacesContext.getCurrentInstance();
-		String URI = ctx.getExternalContext().getRequestContextPath();
-		System.out.println("getRequestContextPath = " + URI);
-		
-		HttpServletRequest rq = (HttpServletRequest) ctx.getExternalContext().getRequest();
-		String rqURI = rq.getRequestURI();
-		
-		System.out.println("getRequestUri = " + rqURI);
-		return "index.xhtml";
+		return "logout";
 	}
 }
