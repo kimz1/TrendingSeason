@@ -78,17 +78,54 @@ body {
 	to {opacity: 0.5;}
 }
 
-.overlay {
+.login_container_hidden {
+	display: none;
+	height: 250px;
+	width: 250px;
+}
+
+.login_container_shown {
 	position: fixed;
 	top: 0px;
     left: 0px;
-	float: left;
 	height: 100%;
 	width: 100%;
 	background-color: black;
 	opacity: 0.4;
-	z-index: 100;
 	animation-name: darken;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
+}
+
+.win_login_hidden {
+	position: fixed;
+	width: 250px;
+	height: 250px;
+	top: 10000px;
+	left: 10000px;
+	border-radius: 20px;
+	display: none;
+}
+
+.win_login_shown {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	
+	width: 250px;
+	height: 250px;
+	border: 1px solid black;
+	border-radius: 20px;
+	background-color: #DCDCDC;
+	padding: 10px;
+}
+
+.win_login_shown .login_lbl {
+	color: #5D5D5D;
+	font: 24px helvetica, calibri, arial, sans-serif;
+	font-style: normal;
+	text-shadow: gray;
+	
 }
