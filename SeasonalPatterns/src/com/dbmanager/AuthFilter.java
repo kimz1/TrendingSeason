@@ -2,7 +2,6 @@ package com.dbmanager;
 
 import java.io.IOException;
 
-import javax.faces.context.FacesContext;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -27,10 +26,9 @@ public class AuthFilter implements  Filter {
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
 			throws IOException, ServletException {
 		
-		FacesContext ctx = FacesContext.getCurrentInstance();
-		HttpSession session = (HttpSession) ctx.getExternalContext().getSession(false);
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) res;
+		HttpSession session = request.getSession(false);
 		String URI = request.getRequestURI();
 		
 		if(URI.indexOf("/ts/") < 0 || session.getAttribute("username") != null) {
