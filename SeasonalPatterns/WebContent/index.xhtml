@@ -14,6 +14,12 @@
 <h:body>
 	<f:view>
 		<utils:nav_bar id="nav_bar"></utils:nav_bar>
+		<h:panelGroup id="login_container" styleClass="login_container_hidden" layout="block"></h:panelGroup>
+		<h:panelGroup id="win_container" styleClass="win_container_hidden" layout="block">
+			<h:panelGroup id="win_login" styleClass="win_login" layout="block">
+				<h:outputLabel styleClass="login_lbl" value="User Login"></h:outputLabel>
+			</h:panelGroup>
+		</h:panelGroup>
 	</f:view>
 </h:body>
 </html>

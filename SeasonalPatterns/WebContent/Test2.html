@@ -4,37 +4,52 @@
 <title>Event Propagation</title>
 
 <style>
-#t-daddy { border: 1px solid red }
-#c1 { background-color: pink; }
+#p {
+	height: 100px;
+	width: 100px;
+	left: 0px;
+	right: 0px;
+	background-color: blue;
+}
+
+#ch {
+	height: 50px;
+	width: 50px;
+	left: 0px;
+	right: 0px;
+	background-color: green;
+}
 </style>
 
 <script>
-function stopEvent(ev) {
-  c2 = document.getElementById("c2");
-  c2.innerHTML = "hello";
+	var ch, p;
+	window.onload = init;
 
-  // this ought to keep t-daddy from getting the click.
-  ev.stopPropagation();
-  alert("event propagation halted.");
-}
+	function init() {
+		p = document.getElementById("p");
+		ch = document.getElementById("ch");
+	}
+	(function() {
+		console.log(p);
+		console.log(ch);
 
-function load() {
-  elem = document.getElementById("tbl1");
-  elem.addEventListener("click", stopEvent, false);
-}
+		p.addEventListener("click", funcParent, false);
+		ch.addEventListener("click", funcChild, false);
+
+		function funcParent(event) {
+			console.log("parent");
+		}
+
+		function funcChild(event) {
+			console.log("child");
+		}
+	})();
 </script>
 </head>
 
-<body onload="load();">
-
-<table id="t-daddy" onclick="alert('hi');">
-  <tr id="tbl1">
-    <td id="c1">one</td>
-  </tr>
-  <tr>
-    <td id="c2">two</td>
-  </tr>
-</table>
-
+<body>
+	<div id="p">
+		<div id="ch"></div>
+	</div>
 </body>
 </html>
