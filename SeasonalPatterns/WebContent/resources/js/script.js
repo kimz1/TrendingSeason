@@ -1,31 +1,35 @@
+var loginContainer, loginWin;
+
 if(window.onload) {
 	var tempOnload = window.onload;
 	var newOnload = function() {
 		tempOnload();
 		init();
-	}
+	};
 	window.onload = newOnload;
 } else {
 	window.onload = init;
 }
 
 function init() {
-
+	loginContainer = document.getElementById("nav_bar:login:login_container");
+	loginWin = document.getElementById("nav_bar:login:win_login");
+	loginContainer = document.getElementById("nav_bar:login:login_container");
+	loginWin = document.getElementById("nav_bar:login:win_login");
+	loginContainer.addEventListener("click", login.doClose ,true);
 }
 var login = {
 	
 	showLogin : function() {
-		var loginContainer = document.getElementById("nav_bar:login:login_container");
-		var win = document.getElementById("nav_bar:login:win_login");
 		loginContainer.setAttribute("class", "login_container_shown");
-		win.setAttribute("class", "win_login_shown");
+		loginWin.setAttribute("class", "win_login_shown");
+	},
 		
-		loginContainer.addEventListener("click", stopEvent ,false);
-		function stopEvent(ev) {
+	doClose : function(event) {
+			if(!event.stopPropagation()) console.log("stopPropagation() SHOULD WORK / " + event.stopPropagation());
+			if(!event.preventDefault()) console.log("preventDefault() SHOULD WORK / " + event.preventDefault());
 			loginContainer.setAttribute("class", "login_container_hidden");
-			win.setAttribute("class", "win_login_hidden");
-			ev.stopPropagation();
-		}
+			loginWin.setAttribute("class", "win_login_hidden");
 	}
 	/*showLogin : function() {
 		login.fadeBackground();
@@ -48,4 +52,4 @@ var login = {
 		var win = document.getElementById("nav_bar:login:win_login");
 		win.setAttribute("class", "win_login_shown");
 	}*/
-}
+};
