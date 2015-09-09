@@ -9,16 +9,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<title>Insert title here</title>
 	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+	<h:outputScript library="js" name="jquery-1.11.3.min.js"></h:outputScript>
 	<h:outputScript library="js" name="script.js"></h:outputScript>
 </h:head>
 <h:body>
 	<f:view>
 		<utils:nav_bar id="nav_bar"></utils:nav_bar>
 		<h:panelGroup id="login_container" styleClass="login_container_hidden" layout="block"></h:panelGroup>
-		<h:panelGroup id="win_container" styleClass="win_container_hidden" layout="block">
-			<h:panelGroup id="win_login" styleClass="win_login" layout="block">
-				<h:outputLabel styleClass="login_lbl" value="User Login"></h:outputLabel>
-			</h:panelGroup>
+		<h:panelGroup id="win_login" styleClass="win_login_hidden" layout="block">
+<!-- 	<h:panelGroup id="win_container" styleClass="win_container_hidden" layout="block"></h:panelGroup> -->
+			<h:outputLabel styleClass="login_lbl" value="User Login"></h:outputLabel>
 		</h:panelGroup>
 	</f:view>
 </h:body>

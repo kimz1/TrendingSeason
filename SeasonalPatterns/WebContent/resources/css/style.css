@@ -96,26 +96,10 @@ body {
 	animation-name: darken;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
+	z-index: 1;
 }
 
-.win_container_visible {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	text-align: center;
-}
-
-.win_container_hidden {
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	display: none;
-}
-
-.win_login {
+.win_login_visible {
 	position: absolute;
 	width: 250px;
 	height: 250px;
@@ -129,7 +113,21 @@ body {
 	z-index: 2;
 }
 
-.win_login .login_lbl {
+.win_login_hidden {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	display: none;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 20px;
+	background-color: #DCDCDC;
+	padding: 10px;
+	z-index: 2;
+}
+
+.win_login_visible .login_lbl {
 	color: #5D5D5D;
 	font: 24px helvetica, calibri, arial, sans-serif;
 	font-style: normal;

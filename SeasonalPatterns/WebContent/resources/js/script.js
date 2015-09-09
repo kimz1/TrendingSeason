@@ -1,32 +1,13 @@
-var loginContainer, winContainer, win;
+//var loginContainer, winContainer, win;
 
-if(window.onload) {
-	var tempOnload = window.onload;
-	var newOnload = function() {
-		tempOnload();
-		init();
-	};
-	window.onload = newOnload;
-} else {
-	window.onload = init;
-}
-
-function init() {
-	loginContainer = document.getElementById("login_container");
-	winContainer = document.getElementById("win_container");
-	win = document.getElementById("win_login");
-	winContainer.addEventListener("click", login.doClose ,true);
-}
-var login = {
-	
-	showLogin : function() {
-		loginContainer.setAttribute("class", "login_container_visible");
-		winContainer.setAttribute("class", "win_container_visible");
-	},
-		
-	doClose : function(event) {
-			loginContainer.setAttribute("class", "login_container_hidden");
-			winContainer.setAttribute("class", "win_container_hidden");
-			event.stopPropagation();
-	}
-};
+$(document).ready(function(){
+	$("#login").click(function(){
+		$("#login_container").attr("class", "login_container_visible");
+		$("#win_login").attr("class", "win_login_visible");
+	});
+	$("#login_container").click(function(event){
+		event.stopPropagation();
+		$(this).attr("class", "login_container_hidden");
+		$("#win_login").attr("class", "win_container_hidden");
+	});
+});
