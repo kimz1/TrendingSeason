@@ -6,7 +6,12 @@ body {
 	margin: 0;
 }
 
-#nav_bar {
+noscript {
+	font: 32px helvetica, calibri, arial, sans-serif;
+	color: #5D5D5D;
+}
+
+#navBar {
 	background-color: #5D5D5D;
 	padding-left: 0px;
 	height: 46px;
@@ -41,95 +46,93 @@ body {
 	background-color: #4A4A4A;
 }
 
-#login {
+#loginBtn {
 	font: 14px helvetica, calibri, arial, sans-serif;
 	color: #DCDCDC;
 	background-color: inherit;
-	line-height: 42px;
+	line-height: 41px;
 	cursor: default;
 	float: right;
 	margin: 2px 2px 0px 0px;
 }
 
-#login img {
+#loginBtn img {
 	float: left;
 	padding: 5px 8px 0px 10px;
 }
 
-#login .login_lbl {
+#loginBtn .login_lbl {
 	float: right; 
 	padding-right: 10px;
 }
 
-#login:HOVER {
+#loginBtn:HOVER {
 	background-color: #4A4A4A;
 }
 
-@-moz-keyframes darken {
-	from {opacity: 0.1;}
-	to {opacity: 0.5;}
-}
-
-@-webkit-keyframes darken {
-	from {opacity: 0.1;}
-	to {opacity: 0.5;}
-}
-
-@keyframes darken {
-	from {opacity: 0.1;}
-	to {opacity: 0.5;}
-}
-
-.login_container_hidden {
-	display: none;
-	height: 250px;
-	width: 250px;
-}
-
-.login_container_visible {
+.login_background {
 	position: fixed;
 	top: 0px;
     left: 0px;
 	height: 100%;
 	width: 100%;
 	background-color: black;
-	animation-name: darken;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
+	opacity: 0.5;
 	z-index: 1;
 }
 
-.win_login_visible {
-	position: absolute;
+.login_form {
+	position: fixed;
 	width: 250px;
 	height: 250px;
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
+	top: 50%;
+	left: 50%;
+	margin-left: -125px;
+	margin-top: -125px;
 	border: 1px solid black;
 	border-radius: 20px;
 	background-color: #DCDCDC;
 	padding: 10px;
 	z-index: 2;
-}
-
-.win_login_hidden {
-	position: absolute;
-	width: 250px;
-	height: 250px;
-	display: none;
-	vertical-align: middle;
 	text-align: center;
-	border: 1px solid black;
-	border-radius: 20px;
-	background-color: #DCDCDC;
-	padding: 10px;
-	z-index: 2;
+	vertical-align: middle;
 }
 
-.win_login_visible .login_lbl {
+.login_form table {
+	margin: auto;
+}
+
+.login_form tbody {
+	text-align: left;
+}
+
+.login_form tfoot a{
+	margin-top: 50px;
+}
+
+.login_form .login_lbl {
 	color: #5D5D5D;
 	font: 24px helvetica, calibri, arial, sans-serif;
 	font-style: normal;
-	text-shadow: gray;
+	text-shadow: 1px 1px 1px rgba(100, 100, 100, 0.30);
+}
+
+.btn {
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 4px;
+	line-height: 20px;
+	vertical-align: middle;
+	font: 12px helvetica, calibri, arial, sans-serif;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	text-shadow: -1px -1px 0px rgba(70, 70, 70, 0.70);
+	padding: 5px 10px 5px;
+}
+
+.btn_green {
+	background: linear-gradient(to bottom, #33D633, #00CC00);
+	border-color: #535353;
 }

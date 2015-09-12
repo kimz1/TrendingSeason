@@ -4,52 +4,32 @@
 <title>Event Propagation</title>
 
 <style>
-#p {
+#square {
+	border: 1px solid black;
+	background-color: yellow;
 	height: 100px;
 	width: 100px;
-	left: 0px;
-	right: 0px;
-	background-color: blue;
-}
-
-#ch {
-	height: 50px;
-	width: 50px;
-	left: 0px;
-	right: 0px;
-	background-color: green;
+	top: 10px;
+	left: 10px;
 }
 </style>
-
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
 <script>
-	var ch, p;
-	window.onload = init;
-
-	function init() {
-		p = document.getElementById("p");
-		ch = document.getElementById("ch");
-	}
-	(function() {
-		console.log(p);
-		console.log(ch);
-
-		p.addEventListener("click", funcParent, false);
-		ch.addEventListener("click", funcChild, false);
-
-		function funcParent(event) {
-			console.log("parent");
-		}
-
-		function funcChild(event) {
-			console.log("child");
-		}
-	})();
+	$(document).ready(function() {
+		var par = {
+			fcion : function() {
+				console.log(this);
+			}
+		};
+		$("p").on("click", $.proxy(par.fcion, $("h1")));
+	});
+	
 </script>
 </head>
 
 <body>
-	<div id="p">
-		<div id="ch"></div>
-	</div>
+	<h1>Header</h1>
+	<p>Hide</p>
 </body>
 </html>

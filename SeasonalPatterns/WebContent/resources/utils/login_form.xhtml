@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:cc="http://java.sun.com/jsf/composite"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+<cc:interface>
+</cc:interface>
+
+<cc:implementation>
+	<div id="#{cc.id}">
+		<h:panelGroup id="loginBackground" styleClass="login_background" layout="block" style="display:none"></h:panelGroup>
+		<h:panelGroup id="loginForm" styleClass="login_form" layout="block" style="display:none">
+			<h:form id="form1">
+				<h:panelGrid columns="2">
+					<f:facet name="header">
+						<h:outputLabel styleClass="login_lbl" value="User Login"></h:outputLabel>
+					</f:facet>
+					<h:outputText styleClass="login_lbl" style="font-size:14px;" value="User name"></h:outputText>
+					<h:inputText id="userName" maxlength="15" required="true" requiredMessage="Specify your name..." p:placeholder="Enter name..."></h:inputText>
+					<h:outputText styleClass="login_lbl" style="font-size:14px;" value="Password"></h:outputText>
+					<h:inputText id="userPass" maxlength="30" required="true" requiredMessage="Specify your password..." p:placeholder="Enter password..."></h:inputText>
+					<f:facet name="footer">
+						<h:commandLink id="loginSubmit" styleClass="btn btn_green" value="Submit"></h:commandLink>
+					</f:facet>
+				</h:panelGrid>
+			</h:form>
+			
+		</h:panelGroup>
+	</div>
+</cc:implementation>
+</html>

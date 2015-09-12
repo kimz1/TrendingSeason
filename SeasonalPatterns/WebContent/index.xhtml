@@ -14,12 +14,9 @@
 </h:head>
 <h:body>
 	<f:view>
-		<utils:nav_bar id="nav_bar"></utils:nav_bar>
-		<h:panelGroup id="login_container" styleClass="login_container_hidden" layout="block"></h:panelGroup>
-		<h:panelGroup id="win_login" styleClass="win_login_hidden" layout="block">
-<!-- 	<h:panelGroup id="win_container" styleClass="win_container_hidden" layout="block"></h:panelGroup> -->
-			<h:outputLabel styleClass="login_lbl" value="User Login"></h:outputLabel>
-		</h:panelGroup>
+		<utils:nav_bar id="navBar"></utils:nav_bar>
+		<utils:login_form id="loginForm"></utils:login_form>
+		<noscript>This site requires to have JavaScript allowed in your browser</noscript>
 	</f:view>
 </h:body>
 </html>

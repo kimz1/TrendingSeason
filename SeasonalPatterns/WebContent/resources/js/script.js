@@ -1,13 +1,16 @@
 //var loginContainer, winContainer, win;
 
 $(document).ready(function(){
-	$("#login").click(function(){
-		$("#login_container").attr("class", "login_container_visible");
-		$("#win_login").attr("class", "win_login_visible");
+	$("html").addClass("js");
+	
+	var loginBg = $(".login_background");
+	var loginForm = $(".login_form");
+	$("#loginBtn").click(function(){
+		loginBg.fadeIn(400);
+		loginForm.show();
 	});
-	$("#login_container").click(function(event){
-		event.stopPropagation();
-		$(this).attr("class", "login_container_hidden");
-		$("#win_login").attr("class", "win_container_hidden");
+	loginBg.click(function(){
+		loginBg.hide();
+		loginForm.hide();
 	});
 });
